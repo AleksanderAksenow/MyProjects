@@ -10,12 +10,12 @@ import java.util.Scanner;
  * Произвести декомпозицию по своему усмотрению. Рекомендую скинуть на проверку. Контакт ниже.
  */
 public class Zadacha9_1 {
+
     public static void main(String[] args) {
        /* Scanner scanner = new Scanner(System.in);*/
-        final Scanner SCANNER=new Scanner(System.in);
 
-        int length = Rectangle.requireInt(/*scanner,*/ "Enter rectangle's length: ");
-        int width = Rectangle.requireInt(/*scanner,*/ "Enter rectangle's width: ");
+        int length = requireInt(/*scanner,*/ "Enter rectangle's length: ");
+        int width = requireInt(/*scanner,*/ "Enter rectangle's width: ");
 
         /*Rectangle.*/SCANNER.close();
 
@@ -23,6 +23,13 @@ public class Zadacha9_1 {
         String verticalLines = Rectangle.createVerticalLines(length, width);
 
         Rectangle.printRectangle(horizontalLine, verticalLines);
+    }
+    public static final Scanner SCANNER=new Scanner(System.in);
+
+    static int requireInt(/*Scanner scanner,*/ String requiringMessage) {
+        System.out.print(requiringMessage);
+
+        return SCANNER.nextInt();
     }
 
 /*

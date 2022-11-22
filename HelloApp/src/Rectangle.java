@@ -7,11 +7,6 @@ public class Rectangle {
     public static final String PROBEL="  ";
  /*   public static final Scanner SCANNER=new Scanner(System.in);*/
 
-    static int requireInt(/*Scanner scanner,*/ String requiringMessage) {
-        System.out.print(requiringMessage);
-
-        return SCANNER.nextInt();
-    }
 
     static void printRectangle(String horizontalLine, String verticalLines) {
         System.out.print(horizontalLine + verticalLines + horizontalLine);
