@@ -1,56 +1,41 @@
 package counterAggregation;
 
-import static counterAggregation.CounterService.*;
-
 public class Counter {
-    private final String NAME;
-    private final String UNITS;
-    private int counter;
+    private final String NAME; //Имя счетчика
+    private final String UNITS; //Ед. измерения счетчика
+    private int counter; //Показания счетчика
 
-    public Counter(String name) {
-
-        this(name, 0,"м3");
-    }
-
-    public Counter(String name, int counter, String units) {
+    public Counter(String name, int counter, String units) {  //Установка значаний для нового счетчика
         this.counter = counter;
         this.NAME = name;
-        this.UNITS=units;
-    //    counters.addCounters(name);
+        this.UNITS = units;
     }
 
-    public void setCounter(int counter) {
+    public void setCounter(int counter) { //Установка показаний
+
         this.counter = counter;
     }
 
-    public String getNAME() {
+    public void addCounter(int additive) { //Добавление к показаниям
+        this.counter += additive;
+    }
+
+    public void zeroCounter() { //Обнуление показаний
+        this.counter = 0;
+    }
+
+    public String getNAME() {//Возврат имени счетчика
+
         return NAME;
     }
-    public String getUNITS() {
+
+    public String getUNITS() {//Возврат ед. измерения счетчика
+
         return UNITS;
     }
 
-    public int getCounter() {
-        return counter;
-    }
-
-/*    public int increase(int value) {
-        counter += value;
+    public int getCounter() {//Возврат показаний счетчика
 
         return counter;
     }
-
-    public int decrease(int value) {
-        counter -= value;
-
-        return counter;
-    }
-
-    public int increment() {
-        return ++counter;
-    }
-
-    public int decrement() {
-        return --counter;
-    }*/
 }
