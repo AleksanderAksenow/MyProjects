@@ -1,6 +1,6 @@
 //package lesson3;
 
-import org.jetbrains.annotations.NotNull;
+//import org.jetbrains.annotations.NotNull;
 
 import java.util.Scanner;
 
@@ -50,7 +50,7 @@ import java.util.Scanner;
             cicle(s);
         }
 
-        static void cicle(@NotNull String line) {
+        static void cicle(String line) {
             switch (line) {
                 case "Hi":  // Если s равно "Hi"
 //                Выводим в консоль "Hello"
