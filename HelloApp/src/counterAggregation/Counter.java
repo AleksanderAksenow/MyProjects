@@ -11,6 +11,16 @@ public class Counter {
         this.UNITS = units;
     }
 
+/*
+    public static void findCounters(Counter counterService,String findName){
+        for (Counter a:counterService) { //Печать нужных счетчиков
+            if (a!=null&&a.getNAME()==findName){
+                printCounterValue(a);
+            }
+        }
+    }
+*/
+
     public void setCounter(int counter) { //Установка показаний
 
         this.counter = counter;

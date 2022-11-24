@@ -22,14 +22,29 @@ public class Zadacha10_1 {
         printCounterValue(counterService[1]);
         printCounterValue(counterService[2]);
 
-        for (Counter a:counterService) { //Печать всех счетчиков
-            if (a!=null){
-                printCounterValue(a);
-            }
+        printAllCounters(counterService); //Печать всех счетчиков
+
+        String name="Газ";
+        printFindCounters(counterService,name); //Печать счетчиков по имени
+
+    }
+public static void printAllCounters(Counter[] counterService) { //Печать всех счетчиков
+    for (Counter a : counterService) { //Печать всех счетчиков
+        if (a != null) {
+            printCounterValue(a);
+        }
+    }
+}
+
+public static void printFindCounters(Counter[] counterService,String name){ //Печать счетчиков по имени
+    for (Counter a:counterService) { //Печать всех счетчиков
+        if (a!=null&&a.getNAME().equals(name)){
+            printCounterValue(a);
         }
     }
 
-    private static void printCounterValue(Counter counter) {
+}
+    public static void printCounterValue(Counter counter) { //Печать данных конкретного счетчика
         System.out.printf("%s: %d %s\n", counter.getNAME(), counter.getCounter(), counter.getUNITS());
     }
 }
