@@ -29,7 +29,7 @@ public class Zadacha10_1 {
 
     }
 public static void printAllCounters(Counter[] counterService) { //Печать всех счетчиков
-    for (Counter a : counterService) { //Печать всех счетчиков
+    for (Counter a : counterService) {
         if (a != null) {
             printCounterValue(a);
         }
@@ -37,7 +37,7 @@ public static void printAllCounters(Counter[] counterService) { //Печать �
 }
 
 public static void printFindCounters(Counter[] counterService,String name){ //Печать счетчиков по имени
-    for (Counter a:counterService) { //Печать всех счетчиков
+    for (Counter a:counterService) {
         if (a!=null&&a.getNAME().equals(name)){
             printCounterValue(a);
         }
