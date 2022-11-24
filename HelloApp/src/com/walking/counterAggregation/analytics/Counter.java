@@ -1,4 +1,4 @@
-package counterAggregation;
+package com.walking.counterAggregation.analytics;;
 
 public class Counter {
     private final String NAME; //Имя счетчика

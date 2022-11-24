@@ -1,4 +1,6 @@
-package counterAggregation;
+package com.walking.counterAggregation;
+
+import com.walking.counterAggregation.analytics.Counter;
 
 public class Zadacha10_1 {
     public static void main(String[] args) {
