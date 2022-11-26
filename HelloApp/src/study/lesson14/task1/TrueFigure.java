@@ -12,7 +12,7 @@ public class TrueFigure {
     final char SPACE=' ';
 
     public TrueFigure(Scanner in){
-        System.out.print("Введите сторону фигуры: ");
+        System.out.print("Введите длинну стороны фигуры: ");
         length=in.nextInt();
     }
     public void printFigure(){

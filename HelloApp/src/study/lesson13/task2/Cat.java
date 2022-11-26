@@ -9,14 +9,14 @@ class Cat extends Animal {
     }
 
     public Cat(String color) {
-        super("Cat");
-        //    new Cat();
+        //super("Cat");
+        this();
         this.color = color;
         System.out.println("I'm a " + color + " cat!");
     }
 
-    public static void Meow() {
+    public  void meow() {
         //      System.out.println("Meow");
-        Animal.Sound("Meow");
+        this.sound("Meow");
     }
 }

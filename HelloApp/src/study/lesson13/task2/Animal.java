@@ -8,7 +8,8 @@ class Animal {
         System.out.println("I'm an animal");
     }
 
-    protected static void Sound(String sound) {
+    protected void sound(String sound) {
+
         System.out.println(sound);
     }
 }

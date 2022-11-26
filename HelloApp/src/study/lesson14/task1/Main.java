@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int choice;
-        Scanner in = new Scanner(System.in);
+        final Scanner in = new Scanner(System.in);
 
         choice=figureChoice(in);
 

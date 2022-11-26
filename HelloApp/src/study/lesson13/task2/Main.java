@@ -6,23 +6,29 @@ public class Main {
         animal[0] = new Dog("Black");
         animal[1] = new Cat("White");
         animal[2] = new Cow("Green");
-        Dog.Woof();
-        Cat.Meow();
-        Cow.Moo();
-        Voice(animal);
+        Dog animal0 = (Dog) animal[0];
+        Cat animal1 = (Cat) animal[1];
+        Cow animal2 = (Cow) animal[2];
+        animal0.woof();
+        animal1.meow();
+        animal2.moo();
+        voice(animal);
 
     }
-    public static void Voice(Animal[] animal) {
+    public static void voice(Animal[] animal) {
         for (Animal anima : animal) {
             switch (anima.tag) {
                 case "Dog":
-                    Dog.Woof();
+                    Dog dog = (Dog) anima;
+                    dog.woof();
                     break;
                 case "Cat":
-                    Cat.Meow();
+                    Cat cat = (Cat) anima;
+                    cat.meow();
                     break;
                 case "Cow":
-                    Cow.Moo();
+                    Cow cow = (Cow) anima;
+                    cow.moo();
                     break;
             }
         }
