@@ -1,32 +1,22 @@
 package study.lesson14.task2;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        int choice;
-        final Scanner in = new Scanner(System.in);
+        Animal[] animal = new Animal[3];
+        animal[0] = new Dog("Black");
+        animal[1] = new Cat("White");
+        animal[2] = new Cow("Green");
+        animal[0].sound();
+        animal[1].sound();
+        animal[2].sound();
+        voice(animal);
 
-        choice=figureChoice(in);
-
-        if (choice==1){
-            Square square1=new Square(in);
-            square1.printFigure();
-        } else if (choice==2) {
-            Triangle triangle1=new Triangle(in);
-            triangle1.printFigure();
-        } else {
-            System.out.println("Вы че там выбираете??!!");
+    }
+    public static void voice(Animal[] animal) {
+        for (Animal anima : animal) {
+                    anima.sound();
         }
-
-        in.close();
     }
-
-    static int figureChoice(Scanner in) {
-        System.out.print("Выберите что будем рисовать (1) Квадрат (2) Треугольник:");
-        return in.nextInt();
-    }
-
-
 }
+
 
